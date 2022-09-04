@@ -1,0 +1,15 @@
+{
+    "name": "alinesilv/registerform",
+    "autoload": {
+        "psr-4": { 
+            "Aline\\formulary\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "AlineSilv",
+            "email": "alinealv.silv@gmail.com"
+        }
+    ],
+    "require": {}
+}
