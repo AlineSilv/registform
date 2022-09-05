@@ -3,7 +3,7 @@ use Aline\formulary\persons;
 use Aline\formulary\searchdata;
 use Aline\formulary\register;
 use Aline\formulary\excludeperson;
-
+use Aline\formulary\UpdatePerson;
 require_once 'register.php';
 require 'persons.php';
 
