@@ -7,6 +7,7 @@ Video com View e Código:</br>
 -Campos requeridos, campo parametrizados,camposseguros.</br>
 -Todos os resultados visíveis e ordenados em uma página paralela.</br>
 -modelo de arquitetura para configuração dos dados recebidos via front construida.</br>
+-Campos administrados via front, podendo ser excluídos ou editados.</br>
 -banco de dados sincronizado em tempo real.</br></br>
 # Formulary Register Laravel:(tryWithLaravel9)</br>
 -Inserção da biblioteca Laravel, página sendo adaptada e ainda em andamento e por este motivo sem implantação consistente para efetuar testes na mesma.
