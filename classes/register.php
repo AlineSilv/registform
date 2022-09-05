@@ -67,10 +67,7 @@ if(count($data) > 0){
     <td><a href="index.php?id_up=<?php echo $data[$i]['id'];?>"><input type="submit" value="Edit"></a></td> 
       <!--criando método get, com '?=id'.-->
     
-      <td><a onclick="alert()";href="index.php?id=
-    <?php echo $data[$i]['id'];?>">
-    <input type="submit" value="Exclude"></td>
-    <?php
+      <td><a onclick="alert()";href="index.php?id=<?php echo $data[$i]['id'];?>"><input type="submit" value="Exclude"></a></td><?php
   
   }
   
