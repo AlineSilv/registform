@@ -20,6 +20,14 @@ require 'persons.php';
 <!-- TABLE MEMBERS -->
 
 <body>
+<?php
+  if (isset($_GET['id'])){
+    $id_person=addslashes($_GET['id']);
+    $class->excludeperson($id_person);
+    header("location:register.php");
+    //header location(refresh)
+  }
+  ?>
 <section style="display: flex; flex-direction:column; justfy-content:center; background-color:white">
 
 <table class="table">
@@ -68,9 +76,8 @@ if(count($data) > 0){
       <a href="index.php?id_up=<?php echo $data[$i]['id'];?>">
       <input type="submit" value="Edit"></a>
     </td> 
-      <!--criando método get, com '?=id'.-->
     
-      <td>
+      <td><!--criando método get, com '?=id'.-->
         <a href="register.php?id=<?php echo $data[$i]['id'];?>">
         <input type="submit" value="Exclude"></a>
         </td>
@@ -83,14 +90,7 @@ if(count($data) > 0){
     </tbody>";
     ?>
 
-<?php
-  if (isset($_GET['id'])){
-    $id_person=addslashes($_GET['id']);
-    $class->excludeperson($id_person);
-    header("location:register.php");
-    //header location(refresh)
-  }
-  ?>
+
   <tbody>
     <tr>
       <th scope="row"></th>
