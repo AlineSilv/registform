@@ -1,5 +1,6 @@
 # registform : Ainda em Desenvovimento!</br></br>
-Video com View e Código:
+Video com View e Código:</br>
+-Graças ao tempo corrido, achei necessário fazer uma breve introdução ao projeto neste vídeo.
 <a>https://www.youtube.com/watch?v=miW_Elq4u-s</a></br>
 -Formulary Register (tryWithoutLaravel9).</br>
 -O projeto consiste na conexão com banco de dados e administra o mesmo via front-end e via DB.</br>
