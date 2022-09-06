@@ -28,6 +28,12 @@ require 'persons.php';
     //header location(refresh)
   }
   ?>
+  <?php
+    if (isset($_GET['id'])){
+    $id_person=addslashes($_GET['id']);
+    $classUp->searchdata($id_person);
+    }
+  ?>
 <section style="display: flex; flex-direction:column; justfy-content:center; background-color:white">
 
 <table class="table">
