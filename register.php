@@ -5,7 +5,7 @@ use Aline\formulary\register;
 use Aline\formulary\excludeperson;
 use Aline\formulary\UpdatePerson;
 require_once 'register.php';
-require 'persons.php';
+require 'classes/persons.php';
 
 
 ?>
