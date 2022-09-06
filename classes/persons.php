@@ -7,7 +7,6 @@ use Aline\formulary\excludeperson;
 use Aline\formulary\UpdatePerson;
 
 
-
 // Class - Classes de Conexão com construtores, 6 funções.
 //Public Function - função construtora,pública.
 //__ Construct- primeiro código a ser executado é o código dentro do construtor.

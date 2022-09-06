@@ -6,8 +6,6 @@ use Aline\formulary\excludeperson;
 use Aline\formulary\UpdatePerson;
 require_once 'register.php';
 require 'classes/persons.php';
-
-
 ?>
 <DOCTYPE html>
     <head>
@@ -20,20 +18,19 @@ require 'classes/persons.php';
 <!-- TABLE MEMBERS -->
 
 <body>
+  
+<?php
+$class= new Persons("persons", "localhost", "root", "");
+$data = $class->searchdata();
+?>
 <?php
   if (isset($_GET['id'])){
     $id_person=addslashes($_GET['id']);
     $class->excludeperson($id_person);
-    header("location:register.php");
+    //header("location:register.php");
     //header location(refresh)
   }
-  ?>
-  <?php
-    if (isset($_GET['id'])){
-    $id_person=addslashes($_GET['id']);
-    $classUp->searchdata($id_person);
-    }
-  ?>
+?>
 <section style="display: flex; flex-direction:column; justfy-content:center; background-color:white">
 
 <table class="table">
@@ -77,7 +74,7 @@ if(count($data) > 0){
       }
     }
     //CRUD------------------------------------------------
-    ?>
+?>
     <td>
       <a href="index.php?id_up=<?php echo $data[$i]['id'];?>">
       <input type="submit" value="Edit"></a>

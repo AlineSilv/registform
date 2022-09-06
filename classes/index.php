@@ -1,15 +1,13 @@
-
 <?php
-
 use Aline\formulary\persons;
 
 
 //inejção do arquivo de classes de conexão.
-require_once 'classes/persons.php';
+require_once 'persons.php';
 //require 'vendor/autoload.php';
 
 //autoload composer
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . 'formulary/vendor/autoload.php';
 
 //inejção da classe de conexão, class Person.
 //parâmetros da conexão com valores de campo do db.
@@ -110,10 +108,10 @@ $class=new Persons("persons", "localhost", "root", "");
       <label style="margin-top:10px;" for="name"> Enter Your Full Name:
         <div class="row g-3">
           <div class="col">
-            <input name="firstname" type="text" class="form-control" placeholder="First name" aria-label="First name" value="<?php if(isset($class)){echo $class['firstname'];}?>">
+            <input name="firstname" type="text" class="form-control" placeholder="First name" aria-label="First name" value="<?php if(isset($classUp)){echo $classUp['firstname'];}?>">
           </div>
           <div class="col">
-            <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name" value="<?php if(isset($class)){echo $class['lastname'];}?>">
+            <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
           </div>
         </div>
       </label> 
@@ -203,7 +201,7 @@ $class=new Persons("persons", "localhost", "root", "");
 
 <footer style="display: flex; justify-content:center; color:gray;font: weight 400px;">
   <p>Created by Aline.S</br>
-  <a href="http://localhost/dev/formulary/register.php">AccessRegister</a></p>
+  <a href="http://localhost/dev/formulary/classes/register.php">AccessRegister</a></p>
 
 
 </footer>
