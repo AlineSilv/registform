@@ -1,6 +1,4 @@
-
 <?php
-
 use Aline\formulary\persons;
 
 
@@ -110,10 +108,10 @@ $class=new Persons("persons", "localhost", "root", "");
       <label style="margin-top:10px;" for="name"> Enter Your Full Name:
         <div class="row g-3">
           <div class="col">
-            <input name="firstname" type="text" class="form-control" placeholder="First name" aria-label="First name" value="<?php if(isset($class)){echo $class['firstname'];}?>">
+            <input name="firstname" type="text" class="form-control" placeholder="First name" aria-label="First name" value="<?php if(isset($classUp)){echo $classUp['firstname'];}?>">
           </div>
           <div class="col">
-            <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name" value="<?php if(isset($class)){echo $class['lastname'];}?>">
+            <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
           </div>
         </div>
       </label> 

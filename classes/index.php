@@ -1,4 +1,6 @@
+
 <?php
+
 use Aline\formulary\persons;
 
 
@@ -7,7 +9,7 @@ require_once 'persons.php';
 //require 'vendor/autoload.php';
 
 //autoload composer
-require_once __DIR__ . 'formulary/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 //inejção da classe de conexão, class Person.
 //parâmetros da conexão com valores de campo do db.
@@ -108,33 +110,33 @@ $class=new Persons("persons", "localhost", "root", "");
       <label style="margin-top:10px;" for="name"> Enter Your Full Name:
         <div class="row g-3">
           <div class="col">
-            <input name="firstname" type="text" class="form-control" placeholder="First name" aria-label="First name" value="<?php if(isset($classUp)){echo $classUp['firstname'];}?>">
+            <input name="firstname" type="text" class="form-control" placeholder="First name" aria-label="First name" value="<?php if(isset($class)){echo $class['firstname'];}?>">
           </div>
           <div class="col">
-            <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name" value="<?php if(isset($class)){echo $class['lastname'];}?>">
           </div>
         </div>
       </label> 
       <!--Phone-->
       <div style="margin-top:2%; max-width:60%;" class="input-group mb-3">
         <label for="phone" class="input-group-text" id="basic-addon1">DDI+</label>
-        <input name="phone" type="text" class="form-control" placeholder="(ddd)+" aria-describedby="basic-addon1">
+        <input name="phone" type="text" class="form-control" placeholder="(ddd)+" aria-describedby="basic-addon1" value="<?php if(isset($class)){echo $class['phone'];}?>">
       </div>
       <!--GENDER-->
       <div class="form-check">
-        <input name="gender" class="form-check-input" type="radio" value="female" id="flexRadioDefault">
+        <input name="gender" class="form-check-input" type="radio" value="<?php if(isset($class)){echo $class['female'];}?>" id="flexRadioDefault">
         <label class="form-check-label" for="flexRadioDefault">
           Female
         </label>
         <div class="form-check">
-          <input name="gender" class="form-check-input" type="radio" value="indeterminate" id="flexRadioDefault1">
+          <input name="gender" class="form-check-input" type="radio" value="<?php if(isset($class)){echo $class['indeterminate'];}?>" id="flexRadioDefault1">
           <label class="form-check-label" for="flexCheckIndeterminate" cheked>
             Indeterminate
           </label>
         </div>
       </div>
       <div class="form-check">
-        <input name="gender" class="form-check-input" type="radio" value="male" id="flexRadioDefault">
+        <input name="gender" class="form-check-input" type="radio" value="<?php if(isset($class)){echo $class['male'];}?>" id="flexRadioDefault">
         <label class="form-check-label" for="flexCheckChecked">
           Male
         </label>
@@ -142,27 +144,27 @@ $class=new Persons("persons", "localhost", "root", "");
       <!--E-mail-->
       <div style="width: 60%;" class="col-md-6">
         <label name="email" for="inputEmail4" class="form-label">Enter Your Email:</label>
-        <input name="email" type="email" class="form-control" id="inputEmail4">
+        <input name="email" type="email" class="form-control" id="inputEmail4" value="<?php if(isset($class)){echo $class['email'];}?>">
       </div>
       <div style="width: 60%;" class="col-md-6">
         <!--Password-->
         <label name="password" for="inputPassword4" class="form-label">Password:</label>
-        <input name="password" type="password" class="form-control" id="inputPassword4">
+        <input name="password" type="password" class="form-control" id="inputPassword4" value="<?php if(isset($class)){echo $class['password'];}?>">
       </div>
       <!--Address-->
       <div style="max-width:60%;" class="col-12">
         <label name="address" for="inputAddress" class="form-label">Address:</label>
-        <input name="address"type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        <input name="address"type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="<?php if(isset($class)){echo $class['address'];}?>">
       </div>
       <!--City-->
       <div style="width:60%;" class="col-md-6">
         <label name="city" for="inputCity" class="form-label">City:</label>
-        <input name="city" type="text" class="form-control" id="inputCity">
+        <input name="city" type="text" class="form-control" id="inputCity" value="<?php if(isset($class)){echo $class['city'];}?>">
       </div>
       <!--State-->
       <div style="width:60%;" class="col-md-4">
         <label name="state" for="inputState" class="form-label">State:</label>
-        <select name="state" id="inputState" class="form-select">
+        <select name="state" id="inputState" class="form-select" value="<?php if(isset($class)){echo $class['state'];}?>">
           <option selected>Choose...</option>
           <option value="Other">Other</option>
           <option value="MG"> Minas Gerais </option>
@@ -176,19 +178,19 @@ $class=new Persons("persons", "localhost", "root", "");
       <!--District-->
       <div style="width:50%;" class="col-md-2">
         <label for="inputZip" class="form-label">District</label>
-        <input name="district" type="text" class="form-control" id="inputZip">
+        <input name="district" type="text" class="form-control" id="inputZip" value="<?php if(isset($class)){echo $class['district'];}?>">
       </div>
       <!--I CONFIRM THE INFORMATION-->
       <div class="col-12">
         <div class="confirm" class="form-check">
-          <input name="confirm" class="form-check-input" type="checkbox" id="gridCheck">
+          <input name="confirm" class="form-check-input" type="checkbox" id="gridCheck" value="confirm">
           <label class="form-check-label" for="gridCheck">
             I confirm the informations above.
           </label>
         </div>
       </div>
       <div style="margin-top:5%; margin-bottom:5%;" class="col-12">
-        <a href="#"><button id="submit" type="submit" class="butto" >Register</button></a>
+        <a href="#"><button id="submit" type="submit" class="butto" value="<?php if(isset($class)){echo "Update";}else{echo "register";};?>" >Register</button></a>
       </div>
     </form>
 
@@ -201,7 +203,7 @@ $class=new Persons("persons", "localhost", "root", "");
 
 <footer style="display: flex; justify-content:center; color:gray;font: weight 400px;">
   <p>Created by Aline.S</br>
-  <a href="http://localhost/dev/formulary/classes/register.php">AccessRegister</a></p>
+  <a href="http://localhost/dev/formulary/register.php">AccessRegister</a></p>
 
 
 </footer>
