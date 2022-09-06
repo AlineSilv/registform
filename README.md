@@ -2,7 +2,7 @@
 Video com View:</br>
 -Graças ao tempo corrido, achei necessário fazer uma breve introdução ao projeto neste vídeo. (Video será atualizado em 05/09)</br>
 <a>https://youtu.be/yquneN26S9Y</a></br>
--Formulary Register (tryWithoutLaravel9).</br> -->
+-Formulary Register (tryWithoutLaravel9).</br> 
 -O projeto consiste na conexão com banco de dados e administra o mesmo via front-end e via DB.</br>
 -Campos requeridos, campo parametrizados,camposseguros.</br>
 -Todos os resultados visíveis e ordenados em uma página paralela.</br>
