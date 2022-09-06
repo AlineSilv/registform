@@ -103,7 +103,7 @@ public function UpdatePerson($id){
 
 }
 
-
-
+//replica nos inputs.
+//value="<?php if(isset($classUp)){echo $classUp['firstname'];} ?>"
 
 ?>
